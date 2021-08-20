@@ -8,7 +8,7 @@ public class Main {
         if (recharge > 1000) {
             totalBonus = recharge / account;
         } else {
-            totalBonus = 0;
+            totalBonus = account + recharge;
         }
         System.out.println("Бонус за пополнение:" + totalBonus);
         System.out.println("Остаток на счету:" + totalAmount);
