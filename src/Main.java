@@ -3,13 +3,15 @@ public class Main {
         int account = 100;
         int recharge = 1100;
         int totalBonus;
-        int totalAmount = account + recharge;
-        if (recharge <= 1000) {
-            totalBonus = 0;
+        int totalAmount = account + recharge + recharge / account;
+
+        if (recharge > 1000) {
+            totalBonus = recharge / account;
+
         } else {
-            totalBonus = account + recharge + recharge / account;
+            totalBonus = account + recharge;
         }
-        System.out.println("Остаток на счету:" + totalBonus);
+        System.out.println("Остаток на счету:" + totalAmount);
 
     }
 
